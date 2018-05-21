@@ -1,0 +1,15 @@
+
+# source bashrc (init-functions included)
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+
+# Load any supplementary scripts
+for config in "$HOME"/.profile.d/*.bash ; do
+    . "$config"
+done
+unset -v config
+
+if [ -f ~/.profile_local ]; then
+    . ~/.profile_local
+fi
