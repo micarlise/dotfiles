@@ -5,6 +5,11 @@
 - clean: ['~']
 
 - link:
+    ~/.bashrc: 'bash/bashrc'
+    ~/.profile: 'bash/bash_profile'
+    ~/.init-functions.bash: 'bash/init-functions.bash'
+    ~/.bashrc.d: 'bash/bashrc.d'
+    ~/.profile.d: 'bash/profile.d'
 
 - shell:
     - [git submodule update --init --recursive, Install submodules] 
