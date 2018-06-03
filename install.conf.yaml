@@ -6,7 +6,7 @@
 
 - link:
     ~/.bashrc: 'bash/bashrc'
-    ~/.profile: 'bash/bash_profile'
+    ~/.bash_profile: 'bash/bash_profile'
     ~/.init-functions.bash: 'bash/init-functions.bash'
     ~/.bashrc.d: 'bash/bashrc.d'
     ~/.profile.d: 'bash/profile.d'
