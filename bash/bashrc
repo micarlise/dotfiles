@@ -1,4 +1,9 @@
 
+# Set variables
+
+# determines OS behavior
+export OS_TYPE=`uname -s` 
+
 # source helper functions
 source "${HOME}"/.init-functions.bash
 
