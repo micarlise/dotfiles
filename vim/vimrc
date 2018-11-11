@@ -1,0 +1,28 @@
+
+" defaults
+filetype plugin indent on
+syntax enable
+syntax on
+set relativenumber
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set textwidth=80
+set expandtab
+set smarttab
+
+set background=dark
+
+
+" Relative/absolute number toggling
+function! NumberToggle()
+    if(&relativenumber == 1)
+        set norelativenumber
+	set number
+    else
+	set nonumber
+	set relativenumber
+    endif
+endfunc
+
+noremap <C-n> :call NumberToggle()<CR>
