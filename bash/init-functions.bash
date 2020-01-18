@@ -46,7 +46,7 @@ function removepath {
         for entry in "${entries[@]}"; do
             case ":${1}:" in
                 *":${entry}:"*) ;; # entry labeled for removal
-                *) addpathf ${entry} ;; # add everything else
+                *) REFPATH=${entry}:$REFPATH ;; # add everything else
             esac
         done
         REFPATH=${REFPATH%:} 
@@ -70,7 +70,10 @@ function cleanpath {
 
         REFPATH=
         for entry in "${entries[@]}"; do
-            addpathf ${entry}
+            case ":$REFPATH:" in
+                *":${entry}:"*) ;;
+                *) REFPATH=${entry}:$REFPATH ;;
+            esac
         done
         REFPATH=${REFPATH%:}
         unset entry 
