@@ -1,20 +1,9 @@
 
-
-
 # Source NVM if installed
 
 if [ -d ~/.nvm ]; then
     export NVM_DIR=~/.nvm
-fi
-
-if [ $OS_TYPE = "Darwin" ]; then
-    # Assume nvm installed with brew
-    if [ -r /usr/local/opt/nvm/nvm.sh ]; then
-        . /usr/local/opt/nvm/nvm.sh
-    fi
-else # Linux
-    if [ -r /usr/share/nvm/init-nvm.sh ]; then
-        . /usr/share/nvm/init-nvm.sh
-    fi
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    [ -s $"NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 fi
 
