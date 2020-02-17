@@ -1,5 +1,5 @@
 
-for config in dev-envs/*.bash ; do
+for config in ${HOME}/.profile.d/dev-envs/*.bash ; do
     . "$config"
 done
 unset -v config
